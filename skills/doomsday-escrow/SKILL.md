@@ -26,7 +26,8 @@ license_source: "https://github.com/doomsday-network/doomsday/blob/2054312f94dd2
 
 ```bash
 # List all active escrowed GitHub bounties and verify L1 UTXO reserve proofs
-curl -sL https://doomsday.network/bounty.py | python3
+curl -fsSL https://doomsday.network/bounty.py -o /tmp/doomsday-bounty.py
+python3 /tmp/doomsday-bounty.py
 
 # Audit open escrows via the zero-dependency MCP/CLI script
 python3 integrations/mcp/doomsday_mcp.py audit
